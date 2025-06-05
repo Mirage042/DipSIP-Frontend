@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Dashboard</title>
+    <meta name="description" content="Professional financial dashboard for tracking stocks, commodities, derivatives, and cryptocurrencies with real-time data visualization." />
+    
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Financial Dashboard - Asset Management Platform" />
+    <meta property="og:description" content="Track and analyze your financial portfolio with our comprehensive dashboard featuring stocks, commodities, derivatives, and cryptocurrency data." />
+    <meta property="og:type" content="website" />
+    
+    <!-- Vue 3 CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Vue Router CDN -->
+    <script src="https://unpkg.com/vue-router@4/dist/vue-router.global.js"></script>
+    <!-- Vuetify 3 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@3.5.6/dist/vuetify.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@3.5.6/dist/vuetify.min.js"></script>
+    <!-- Material Design Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@7.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+
+      #app {
+        min-height: 100vh;
+      }
+
+      /* Glass Morphism Effects */
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      }
+
+      .glass-dark {
+        background: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      /* Responsive text */
+      .responsive-text {
+        font-size: clamp(0.875rem, 2vw, 1rem);
+      }
+
+      /* Card hover effects */
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .hover-lift:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+      }
+
+      /* Loading animations */
+      .pulse-animation {
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+
+      /* Gradient text */
+      .gradient-text {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      /* FAB button positioning */
+      .fab-ai-assistant {
+        position: fixed !important;
+        bottom: 24px;
+        right: 24px;
+        z-index: 1000;
+      }
+
+      /* Main content padding to account for FAB */
+      .main-content {
+        padding-bottom: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./src/main.js"></script>
+  </body>
+</html>
